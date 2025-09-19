@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Learning — Nabha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">DL Nabha</div>
+        <div class="tag">Digital Learning Platform — Rural Schools</div>
+      </div>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <button class="nav-btn" id="nav-home">Home</button>
+        <button class="nav-btn" id="nav-lessons">Lessons</button>
+        <button class="nav-btn" id="nav-teacher">Teacher Dashboard</button>
+        <select id="lang" class="lang-select" title="Select language">
+          <option value="en">English</option>
+          <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Digital Classrooms — Learning Without Borders</h1>
+      <p class="lead">Offline-capable lessons, local-language content, and a simple teacher dashboard — designed for low-end devices and poor connectivity.</p>
+      <div class="hero-actions">
+        <button class="cta" id="cta-lessons">Start Lessons</button>
+        <button class="ghost" id="cta-teacher">Open Teacher Dashboard</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="container main-grid">
+    <!-- HOME / BLOG-LIKE ARTICLE -->
+    <section id="home-section" class="panel">
+      <article class="post">
+        <h2>Why this platform?</h2>
+        <p>Many government schools in Nabha and nearby rural areas lack updated computers, stable internet, and quality digital resources. This platform provides offline lessons, simple interactive quizzes, local-language content, and a teacher dashboard to track student progress.</p>
+
+        <h3>Impact</h3>
+        <ul>
+          <li>Bridges the rural–urban digital divide.</li>
+          <li>Builds foundational digital literacy.</li>
+          <li>Equips students for future learning and employability.</li>
+        </ul>
+
+        <p class="small-muted">Tip: Switch the language using the selector in the header and try the sample lessons.</p>
+      </article>
+    </section>
+
+    <!-- LESSONS -->
+    <section id="lessons-section" class="panel" style="display:none">
+      <div class="panel-header">
+        <h2>Lessons</h2>
+        <div class="panel-actions">
+          <button id="btn-add-sample" class="small-btn">Add Sample Student</button>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="col list-col">
+          <div id="lessons" class="lesson-list"></div>
+        </div>
+
+        <div class="col content-col">
+          <div id="content-area" class="lesson-content">
+            <h3 id="section-title">Welcome</h3>
+            <p class="small-muted">Select a lesson to open. Progress saved locally for offline use.</p>
+            <div class="progress-row">
+              <div class="progress" aria-hidden><i id="progress-bar"></i></div>
+              <div id="progress-text" class="small-muted">0% complete</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHER DASHBOARD -->
+    <section id="teacher-section" class="panel" style="display:none">
+      <div class="panel-header">
+        <h2>Teacher Dashboard</h2>
+        <div class="panel-actions">
+          <button id="reset-data" class="small-btn">Reset Storage</button>
+        </div>
+      </div>
+
+      <div class="teacher-note small-muted">This dashboard reads local data saved by students on the device. For real classrooms, connect to a central server.</div>
+
+      <table id="teacher-table" class="teacher-table" role="table">
+        <thead><tr><th>Student</th><th>Overall Progress</th><th>Last Active</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© 2025 Digital Learning — Nabha</div>
+      <div class="small-muted">Built for low-end devices • Offline-first • Punjabi & English</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
